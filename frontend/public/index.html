@@ -135,11 +135,10 @@
 <!-- Following Menu -->
 <div class="ui large top fixed hidden menu">
   <div class="ui container">
-    <a class="active item">Home</a>
-    <a class="item">O mnie</a>
-    <a class="item">Moje projekty</a>
-    <a class="item">Kontakt</a>
-    <a class="item">Jak złożyć zamówienie?</a>
+    <a class="active item" href="{% url 'home' %}">Home</a>
+    <a class="item" href="{% url 'portfolio' %}">Moje projekty</a>
+    <a class="item" href="{% url 'contact' %}">Kontakt</a>
+    <a class="item" href="{% url 'informations' %}">Jak złożyć zamówienie?</a>
 
     <div class="right menu">
       <div class="item">
@@ -154,11 +153,10 @@
 
 <!-- Sidebar Menu -->
 <div class="ui vertical inverted sidebar menu">
-  <a class="active item">Home</a>
-  <a class="item">O mnie</a>
-  <a class="item">Moje projekty</a>
-  <a class="item">kontakt</a>
-  <a class="item">Jak złożyć zamówienie?</a>
+    <a class="active item" href="{% url 'home' %}">Home</a>
+    <a class="item" href="{% url 'portfolio' %}">Moje projekty</a>
+    <a class="item" href="{% url 'contact' %}">Kontakt</a>
+    <a class="item" href="{% url 'informations' %}">Jak złożyć zamówienie?</a>
 </div>
 
 
@@ -171,18 +169,17 @@
         <a class="toc item">
           <i class="sidebar icon"></i>
         </a>
-        <a class="active item">Home</a>
-        <a class="item">O mnie</a>
-        <a class="item">Moje projekty</a>
-        <a class="item">Kontakt</a>
-        <a class="item">Jak złożyć zamówienie?</a>
+    <a class="active item" href="{% url 'home' %}">Home</a>
+    <a class="item" href="{% url 'portfolio' %}">Moje projekty</a>
+    <a class="item" href="{% url 'contact' %}">Kontakt</a>
+    <a class="item" href="{% url 'informations' %}">Jak złożyć zamówienie?</a>
         <div class="right item">
           <a class="ui inverted button">Log in</a>
           <a class="ui inverted button">Sign Up</a>
         </div>
       </div>
     </div>
-
+      {% block content %}
     <div class="ui text container">
       <h1 class="ui inverted header">
         Chimeric Makramas
@@ -225,6 +222,6 @@
     <div style="margin-top: 10px;" id='root'></div>
   </div>
 </div>
-
+{% endblock %}
   </body>
 </html>
