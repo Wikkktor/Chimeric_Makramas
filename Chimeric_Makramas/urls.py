@@ -23,7 +23,9 @@ from Chimeric_Makramas import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='index.html')),
-    path('portfolio/', TemplateView.as_view(template_name='portfolio.html')),
+    path('', TemplateView.as_view(template_name='index.html'), name="home"),
+    path('portfolio/', TemplateView.as_view(template_name='portfolio.html'), name="portfolio"),
+    path('informations/', TemplateView.as_view(template_name='informations.html'), name='informations'),
+    path('kontakt/', TemplateView.as_view(template_name='contact.html'), name='contact'),
     path('api/', include('api.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
