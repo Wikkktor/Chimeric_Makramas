@@ -6,3 +6,4 @@ class MakramaPost(models.Model):
     description = models.TextField()
     price = models.FloatField()
     photo = models.ImageField(upload_to='makrama_images')
+    available = models.BooleanField(default=True)
