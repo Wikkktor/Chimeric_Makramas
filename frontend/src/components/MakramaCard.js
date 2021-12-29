@@ -1,5 +1,6 @@
 import './App.css';
 import React from 'react';
+import Available from './Available';
 
 
 class MakramaCard extends React.Component {
@@ -11,7 +12,7 @@ class MakramaCard extends React.Component {
 
     render() {
 
-        const {description, photo, price, title} = this.props.image
+        const {description, photo, price, title, available} = this.props.image
         return (
                 <div className="ui special cards">
                     <div className="card">
@@ -31,11 +32,12 @@ class MakramaCard extends React.Component {
                                 <span className="date" style={{color: '#343a40'}}>{description}</span>
                             </div>
                         </div>
-                        <div className="extra content">
+                        <div className="extra content" style={{display: 'flex', justifyContent: 'space-around'}}>
                             <a>
                                 <i className="money icon"></i>
                                 {price} zł
                             </a>
+                            <Available instock={available}/>
                         </div>
                     </div>
                 </div>

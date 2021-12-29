@@ -12,7 +12,6 @@ class App extends React.Component {
             params: {query: term}
         });
     this.setState({makramas: response.data});
-    console.log(this.state.makramas)
     }
 
     render() {
