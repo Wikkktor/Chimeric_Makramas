@@ -1,6 +1,6 @@
 import React from "react";
 import restapi from "./api/restapi";
-import MakramaList from "./components/MakramaList";
+import MakramaListAvailable from "./components/MakramaListAvailable";
 
 
 class App extends React.Component {
@@ -18,7 +18,7 @@ class App extends React.Component {
         return (
             <div>
                 <div className='ui container'>
-                    <MakramaList makramas={this.state.makramas} />
+                    <MakramaListAvailable makramas={this.state.makramas} />
                 </div>
             </div>
         )
