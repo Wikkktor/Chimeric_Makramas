@@ -24,5 +24,6 @@ from Chimeric_Makramas import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='index.html')),
+    path('portfolio/', TemplateView.as_view(template_name='portfolio.html')),
     path('api/', include('api.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
