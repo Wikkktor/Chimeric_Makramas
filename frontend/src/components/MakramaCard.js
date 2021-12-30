@@ -14,7 +14,6 @@ class MakramaCard extends React.Component {
 
         const {description, photo, price, title, available} = this.props.image
         return (
-                <div className="ui special cards">
                     <div className="card">
                         <div className="blurring dimmable image">
                             <div className="ui dimmer">
@@ -40,7 +39,6 @@ class MakramaCard extends React.Component {
                             <Available instock={available}/>
                         </div>
                     </div>
-                </div>
         );
     }
 }
