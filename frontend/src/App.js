@@ -16,21 +16,23 @@ class App extends React.Component {
     }
 
     render() {
-        if (window.location.pathname === '/'){
-            return (
-                <div>
-                    <div className='ui container'>
-                        <MakramaListAvailable makramas={this.state.makramas} />
+        switch (window.location.pathname){
+            case '/':
+                return (
+                    <div>
+                        <div className='ui container'>
+                            <MakramaListAvailable makramas={this.state.makramas} />
+                        </div>
                     </div>
-                </div>
-            )} else if (window.location.pathname === '/portfolio/'){
-            return (
-                <div>
-                    <div className='ui container'>
-                        <MakramaList makramas={this.state.makramas} />
+                )
+            case '/portfolio/':
+                return (
+                    <div>
+                        <div className='ui container'>
+                            <MakramaList makramas={this.state.makramas} />
+                        </div>
                     </div>
-                </div>
-            )
+                )
         }
     }
 }
