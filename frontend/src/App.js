@@ -1,6 +1,7 @@
 import React from "react";
 import restapi from "./api/restapi";
 import MakramaListAvailable from "./components/MakramaListAvailable";
+import MakramaList from "./components/MakramaList";
 
 
 class App extends React.Component {
@@ -15,13 +16,22 @@ class App extends React.Component {
     }
 
     render() {
-        return (
-            <div>
-                <div className='ui container'>
-                    <MakramaListAvailable makramas={this.state.makramas} />
+        if (window.location.pathname === '/'){
+            return (
+                <div>
+                    <div className='ui container'>
+                        <MakramaListAvailable makramas={this.state.makramas} />
+                    </div>
                 </div>
-            </div>
-        )
+            )} else if (window.location.pathname === '/portfolio/'){
+            return (
+                <div>
+                    <div className='ui container'>
+                        <MakramaList makramas={this.state.makramas} />
+                    </div>
+                </div>
+            )
+        }
     }
 }
 
