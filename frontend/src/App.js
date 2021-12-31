@@ -2,8 +2,6 @@ import React from "react";
 import restapi from "./api/restapi";
 import MakramaListAvailable from "./components/MakramaListAvailable";
 import MakramaList from "./components/MakramaList";
-import cube from './cube'
-cube()
 
 class App extends React.Component {
     state = {
