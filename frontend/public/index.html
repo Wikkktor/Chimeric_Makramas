@@ -150,25 +150,16 @@
 <!-- Following Menu -->
 <div class="ui large top fixed hidden menu">
     <div class="ui container">
-        <a class="active item" href="{% url 'home' %}">Home</a>
+        <a class="active item" href="{% url 'home' %}">Strona główna</a>
         <a class="item" href="{% url 'portfolio' %}">Moje projekty</a>
         <a class="item" href="{% url 'contact' %}">Kontakt</a>
         <a class="item" href="{% url 'informations' %}">Jak złożyć zamówienie?</a>
-
-        <div class="right menu">
-            <div class="item">
-                <a class="ui button">Log in</a>
-            </div>
-            <div class="item">
-                <a class="ui primary button">Sign Up</a>
-            </div>
-        </div>
     </div>
 </div>
 
 <!-- Sidebar Menu -->
 <div class="ui vertical inverted sidebar menu">
-    <a class="active item" href="{% url 'home' %}">Home</a>
+    <a class="active item" href="{% url 'home' %}">Strona główna</a>
     <a class="item" href="{% url 'portfolio' %}">Moje projekty</a>
     <a class="item" href="{% url 'contact' %}">Kontakt</a>
     <a class="item" href="{% url 'informations' %}">Jak złożyć zamówienie?</a>
@@ -177,162 +168,151 @@
 
 <!-- Page Contents -->
 <div class="pusher">
-    <div class="ui inverted vertical masthead center aligned segment" style="max-height: 600px;">
+    <div class="ui inverted vertical masthead center aligned segment" style="max-height: 600px;
+        background: url('media/background.png') no-repeat center center fixed;
+        background-size: cover
+    }">
 
         <div class="ui container">
-            <div class="ui large secondary inverted pointing menu">
+            <div class="ui large secondary inverted pointing menu" style="justify-content: center; border: none">
                 <a class="toc item">
                     <i class="sidebar icon"></i>
                 </a>
-                <a class="active item" href="{% url 'home' %}">Home</a>
+                <a class="active item" href="{% url 'home' %}">Strona główna</a>
                 <a class="item" href="{% url 'portfolio' %}">Moje projekty</a>
                 <a class="item" href="{% url 'contact' %}">Kontakt</a>
                 <a class="item" href="{% url 'informations' %}">Jak złożyć zamówienie?</a>
-                <div class="right item">
-                    <a class="ui inverted button">Log in</a>
-                    <a class="ui inverted button">Sign Up</a>
-                </div>
             </div>
         </div>
         {% block content %}
             <div class="ui text container">
-                <h1 class="ui inverted header">
+                <h1 class="ui inverted header" style="color: black">
                     Chimeric Makramas
                 </h1>
-                <h2>Zapraszam Cię do mojego makramowego Świata.</h2>
+                <h2 style="color: black">Zapraszam Cię do mojego makramowego Świata.</h2>
                 <a href="{% url 'portfolio' %}">
                     <div class="ui huge primary button">Moje portfolio<i class="right arrow icon"></i></div>
                 </a>
             </div>
             </div>
             <div class='ui verical stripe segment' style="margin-top: 0">
-                <div class='ui middle aligned stackable grid container' style="margin-top: 5px">
-                    <div class="row">
-                        <div class="eight wide column">
-                            <h3 class="ui header">Jak zaczęła się moja przygoda z makramami?</h3>
-                            <p>Poprostu nadeszła. Nieoczekiwanie. Chciałam robić coś, co będzie sprawiało mi
-                                przyjemność i pozwoli wyrazić się poprzez kreatywność. Kiedy zobaczyłam makramy
-                                w internecie czułam, że to to i od razu zamówiłam pierwsze sznurki.
-                                Na początku nie było łatwo, a efekt nie był zadowalający,
-                                ale plotłam coraz więcej i więcej , aż w końcu zaczęły powstawać projekty,
-                                które są w całości tylko moim pomysłem. Zapraszam więc rozejrzyj się po mojej stronie,
-                                może coś Cię zainspiruje. Może znajdziesz tu makramę, która idealnie wkąponuje się do
-                                Twojego wnętrza.</p>
-                            <h3 class="ui header">Historia makramy</h3>
-                            <p>Makrama jest sztuką, która polega na zaplataniu artystycznych
-                                supełków bez użycia igły czy szydełka, za pomocą tylko samych dłoni.
-                                Staro­żytny wschód znał pismo węzełkowe. Pierwsi żeglarze pletli łańcuszki - talizmany
-                                i przywiązywali je na czubku masztu. Inkowie w Pe­ru wiązali naszyjniki.
-                                Ich właśnie można nazwać twórcami pierwszych Słowo „makrama", jak
-                                podają źródła encyklopedyczne, jest pochodze­nia arabskiego i oznacza "ozdobne
-                                frędzle.</p>
-                        </div>
-                        <div class="six wide right floated column">
-                            <img alt='Weronika Drozd'
-                                 scr="https://semantic-ui.com/examples/assets/images/wireframe/white-image.png">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="center aligned column">
-                            <a href="#root" class="ui huge button" style="background-color: #2185d0; color: white;">
-                                Aktualnie w sprzedaży
-                                <i class="down arrow icon" style="color: white; margin: auto;"></i></a>
-                        </div>
-                    </div>
+                <div class="ui text container" style="margin-top: 5px; text-align: center">
+                    <h2 class="ui header">Historia makramy</h2>
+                    <p>Makrama jest sztuką, która polega na zaplataniu artystycznych
+                        supełków bez użycia igły czy szydełka, za pomocą tylko samych dłoni.
+                        Staro­żytny wschód znał pismo węzełkowe. Pierwsi żeglarze pletli łańcuszki - talizmany
+                        i przywiązywali je na czubku masztu. Inkowie w Pe­ru wiązali naszyjniki.
+                        Ich właśnie można nazwać twórcami pierwszych Słowo „makrama", jak
+                        podają źródła encyklopedyczne, jest pochodze­nia arabskiego i oznacza "ozdobne
+                        frędzle</p>
+                </div>
+            </div>
+            </div>
+            <div style="background: url('media/background.png') no-repeat center center fixed;
+        background-size: cover">
+                <div class="center aligned column" style="text-align: center">
+                    <a href="#root" class="ui huge button" style="background-color: #2185d0; color: white;">
+                        Aktualnie w sprzedaży
+                        <i class="down arrow icon" style="color: white; margin: auto;"></i></a>
                 </div>
                 <div style="margin-top: 10px;" id='root'></div>
-                <div class='ui middle aligned stackable grid container'>
-                    <div class="row">
-                        <div class="center aligned column"><h3>Dostępne kolory</h3></div>
-                    </div>
-                    <div class="row" style="text-align: center">
-                        <div class="four wide right floated column" style="margin: auto">
-                            <div class="ui cube shape">
-                                <div class="sides">
-                                    <div class="side">
-                                        <div class="content">
-                                            <div class="center">
-                                                <i class="ui icon chess queen" style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #5e6472"></i>
-                                            </div>
+            </div>
+            <div class='ui middle aligned stackable grid container'>
+                <div class="row">
+                    <div class="center aligned column"><h3>Dostępne kolory</h3></div>
+                </div>
+                <div class="row" style="text-align: center">
+                    <div class="four wide right floated column" style="margin: auto">
+                        <div class="ui cube shape">
+                            <div class="sides">
+                                <div class="side">
+                                    <div class="content">
+                                        <div class="center">
+                                            <i class="ui icon chess queen"
+                                               style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #5e6472"></i>
                                         </div>
                                     </div>
-                                    <div class="side">
-                                        <div class="content">
-                                            <div class="center">
-                                                <i class="ui icon chess queen" style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #f4acb7"></i>
-                                            </div>
+                                </div>
+                                <div class="side">
+                                    <div class="content">
+                                        <div class="center">
+                                            <i class="ui icon chess queen"
+                                               style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #f4acb7"></i>
                                         </div>
                                     </div>
-                                    <div class="side">
-                                        <div class="content">
-                                            <div class="center">
-                                                <i class="ui icon chess queen" style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #000814"></i>
-                                            </div>
+                                </div>
+                                <div class="side">
+                                    <div class="content">
+                                        <div class="center">
+                                            <i class="ui icon chess queen"
+                                               style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #000814"></i>
                                         </div>
                                     </div>
-                                    <div class="side">
-                                        <div class="content">
-                                            <div class="center">
-                                                <i class="ui icon chess queen" style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #ffd60a"></i>
-                                            </div>
+                                </div>
+                                <div class="side">
+                                    <div class="content">
+                                        <div class="center">
+                                            <i class="ui icon chess queen"
+                                               style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #ffd60a"></i>
                                         </div>
                                     </div>
-                                    <div class="side">
-                                        <div class="content">
-                                            <div class="center">
-                                                <i class="ui icon chess queen" style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #582f0e"></i>
-                                            </div>
+                                </div>
+                                <div class="side">
+                                    <div class="content">
+                                        <div class="center">
+                                            <i class="ui icon chess queen"
+                                               style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #582f0e"></i>
                                         </div>
                                     </div>
-                                    <div class="side active">
-                                        <div class="content">
-                                            <div class="center">
-                                                <i class="ui icon chess queen" style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #03045e"></i>
-                                            </div>
+                                </div>
+                                <div class="side active">
+                                    <div class="content">
+                                        <div class="center">
+                                            <i class="ui icon chess queen"
+                                               style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #03045e"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="ui ignored divider"></div>
-                            <div class="ui ignored icon direction buttons">
-                                <div id='cube_button' class="ui button left" data-animation="flip" title="Flip Left"
-                                     data-direction="left"><i
-                                        class="left long arrow icon"></i></div>
-                                <div id='cube_button' class="ui button up" data-animation="flip" title="Flip Up"
-                                     data-direction="up"><i
-                                        class="up long arrow icon"></i></div>
-                                <div id='cube_button' class="ui icon button down" data-animation="flip"
-                                     title="Flip Down"
-                                     data-direction="down"><i class="down long arrow icon"></i></div>
-                                <div id='cube_button' class="ui icon button right" data-animation="flip"
-                                     title="Flip Right"
-                                     data-direction="right"><i class="right long arrow icon"></i></div>
-                            </div>
                         </div>
-                        <div class="ten wide column">
-                            <div class="ui four column stackable padded grid">
-                                <div class="red column">Red</div>
-                                <div class="orange column">Orange</div>
-                                <div class="yellow column">Yellow</div>
-                                <div class="olive column">Olive</div>
-                                <div class="green column">Green</div>
-                                <div class="teal column">Teal</div>
-                                <div class="blue column">Blue</div>
-                                <div class="violet column">Violet</div>
-                                <div class="purple column">Purple</div>
-                                <div class="pink column">Pink</div>
-                                <div class="brown column">Brown</div>
-                                <div class="grey column">Grey</div>
-                                <div class="black column">Black</div>
-                            </div>
+                        <div class="ui ignored divider"></div>
+                        <div class="ui ignored icon direction buttons">
+                            <div id='cube_button' class="ui button left" data-animation="flip" title="Flip Left"
+                                 data-direction="left"><i
+                                    class="left long arrow icon"></i></div>
+                            <div id='cube_button' class="ui button up" data-animation="flip" title="Flip Up"
+                                 data-direction="up"><i
+                                    class="up long arrow icon"></i></div>
+                            <div id='cube_button' class="ui icon button down" data-animation="flip"
+                                 title="Flip Down"
+                                 data-direction="down"><i class="down long arrow icon"></i></div>
+                            <div id='cube_button' class="ui icon button right" data-animation="flip"
+                                 title="Flip Right"
+                                 data-direction="right"><i class="right long arrow icon"></i></div>
+                        </div>
+                    </div>
+                    <div class="ten wide column">
+                        <div class="ui four column stackable padded grid">
+                            <div class="red column">Red</div>
+                            <div class="orange column">Orange</div>
+                            <div class="yellow column">Yellow</div>
+                            <div class="olive column">Olive</div>
+                            <div class="green column">Green</div>
+                            <div class="teal column">Teal</div>
+                            <div class="blue column">Blue</div>
+                            <div class="violet column">Violet</div>
+                            <div class="purple column">Purple</div>
+                            <div class="pink column">Pink</div>
+                            <div class="brown column">Brown</div>
+                            <div class="grey column">Grey</div>
+                            <div class="black column">Black</div>
                         </div>
                     </div>
                 </div>
             </div>
             </div>
+            </div>
         {% endblock %}
-{#<script src="https://code.jquery.com/jquery-3.1.1.min.js">#}
-{#</script>#}
 
 <!-- Include Semantic UI -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js">
