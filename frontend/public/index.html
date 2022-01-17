@@ -1,318 +1,184 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
     <!-- Standard Meta -->
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
     <!-- Site Properties -->
     <title>Chimeric Makramas</title>
     <link rel="stylesheet" type="text/css" href="https://semantic-ui.com/dist/components/sidebar.css">
     <link rel="stylesheet" type="text/css" href="https://semantic-ui.com/dist/components/transition.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
-
-    <style type="text/css">
-
-        .hidden.menu {
-            display: none;
-        }
-
-        .masthead.segment {
-            min-height: 700px;
-            padding: 1em 0em;
-        }
-
-        .masthead .logo.item img {
-            margin-right: 1em;
-        }
-
-        .masthead .ui.menu .ui.button {
-            margin-left: 0.5em;
-        }
-
-        .masthead h1.ui.header {
-            margin-top: 3em;
-            margin-bottom: 0em;
-            font-size: 4em;
-            font-weight: normal;
-        }
-
-        .masthead h2 {
-            font-size: 1.7em;
-            font-weight: normal;
-        }
-
-        .ui.vertical.stripe {
-            padding: 8em 0em;
-        }
-
-        .ui.vertical.stripe h3 {
-            font-size: 2em;
-        }
-
-        .ui.vertical.stripe .button + h3,
-        .ui.vertical.stripe p + h3 {
-            margin-top: 3em;
-        }
-
-        .ui.vertical.stripe .floated.image {
-            clear: both;
-        }
-
-        .ui.vertical.stripe p {
-            font-size: 1.33em;
-        }
-
-        .ui.vertical.stripe .horizontal.divider {
-            margin: 3em 0em;
-        }
-
-        .quote.stripe.segment {
-            padding: 0em;
-        }
-
-        .quote.stripe.segment .grid .column {
-            padding-top: 5em;
-            padding-bottom: 5em;
-        }
-
-        .footer.segment {
-            padding: 5em 0em;
-        }
-
-        .secondary.pointing.menu .toc.item {
-            display: none;
-        }
-
-        @media only screen and (max-width: 700px) {
-            .ui.fixed.menu {
-                display: none !important;
-            }
-
-            .secondary.pointing.menu .item,
-            .secondary.pointing.menu .menu {
-                display: none;
-            }
-
-            .secondary.pointing.menu .toc.item {
-                display: block;
-            }
-
-            .masthead.segment {
-                min-height: 350px;
-            }
-
-            .masthead h1.ui.header {
-                font-size: 2em;
-                margin-top: 1.5em;
-            }
-
-            .masthead h2 {
-                margin-top: 0.5em;
-                font-size: 1.5em;
-            }
-        }
-    </style>
-
     <script src="https://semantic-ui.com/examples/assets/library/jquery.min.js"></script>
-    <script src="https://semantic-ui.com/dist/components/visibility.js"></script>
-    <script src="https://semantic-ui.com/dist/components/sidebar.js"></script>
-    <script src="https://semantic-ui.com/dist/components/transition.js"></script>
-    <script>
-        $(document)
-            .ready(function () {
-
-                // fix menu when passed
-                $('.masthead')
-                    .visibility({
-                        once: false,
-                        onBottomPassed: function () {
-                            $('.fixed.menu').transition('fade in');
-                        },
-                        onBottomPassedReverse: function () {
-                            $('.fixed.menu').transition('fade out');
-                        }
-                    })
-                ;
-
-                // create sidebar and attach to menu open
-                $('.ui.sidebar')
-                    .sidebar('attach events', '.toc.item')
-                ;
-
-            })
-        ;
-    </script>
 </head>
 <body>
 
-<!-- Following Menu -->
-<div class="ui large top fixed hidden menu">
-    <div class="ui container">
-        <a class="active item" href="{% url 'home' %}">Strona główna</a>
-        <a class="item" href="{% url 'portfolio' %}">Moje projekty</a>
-        <a class="item" href="{% url 'contact' %}">Kontakt</a>
-        <a class="item" href="{% url 'informations' %}">Jak złożyć zamówienie?</a>
-    </div>
-</div>
-
-<!-- Sidebar Menu -->
-<div class="ui vertical inverted sidebar menu">
-    <a class="active item" href="{% url 'home' %}">Strona główna</a>
-    <a class="item" href="{% url 'portfolio' %}">Moje projekty</a>
-    <a class="item" href="{% url 'contact' %}">Kontakt</a>
-    <a class="item" href="{% url 'informations' %}">Jak złożyć zamówienie?</a>
-</div>
-
-
 <!-- Page Contents -->
-<div class="pusher">
-    <div class="ui inverted vertical masthead center aligned segment" style="max-height: 600px;
-        background: url('media/background.png') no-repeat center center fixed;
-        background-size: cover
-    }">
-
-        <div class="ui container">
-            <div class="ui large secondary inverted pointing menu" style="justify-content: center; border: none">
-                <a class="toc item">
-                    <i class="sidebar icon"></i>
-                </a>
-                <a class="active item" href="{% url 'home' %}">Strona główna</a>
-                <a class="item" href="{% url 'portfolio' %}">Moje projekty</a>
-                <a class="item" href="{% url 'contact' %}">Kontakt</a>
-                <a class="item" href="{% url 'informations' %}">Jak złożyć zamówienie?</a>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <img src="/media/logo.png" alt="Chimeric Makramas" style="height: 60px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" style="justify-content: center">
+            <ul class="navbar-nav" style="">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Strona Główna</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Kontakt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'informations' %}">Jak złożyć zamówienie?</a>
+                </li>
+            </ul>
+            <span style="position: absolute; right: 10px; top:50%; font-size: 40px;"><a href="https://instagram.com">
+                <i class="instagram icon"></i>
+            </a></span>
         </div>
-        {% block content %}
-            <div class="ui text container">
-                <h1 class="ui inverted header" style="color: black">
-                    Chimeric Makramas
-                </h1>
-                <h2 style="color: black">Zapraszam Cię do mojego makramowego Świata.</h2>
-                <a href="{% url 'portfolio' %}">
-                    <div class="ui huge primary button">Moje portfolio<i class="right arrow icon"></i></div>
-                </a>
-            </div>
-            </div>
-            <div class='ui verical stripe segment' style="margin-top: 0">
-                <div class="ui text container" style="margin-top: 5px; text-align: center">
-                    <h2 class="ui header">Historia makramy</h2>
-                    <p>Makrama jest sztuką, która polega na zaplataniu artystycznych
-                        supełków bez użycia igły czy szydełka, za pomocą tylko samych dłoni.
-                        Staro­żytny wschód znał pismo węzełkowe. Pierwsi żeglarze pletli łańcuszki - talizmany
-                        i przywiązywali je na czubku masztu. Inkowie w Pe­ru wiązali naszyjniki.
-                        Ich właśnie można nazwać twórcami pierwszych Słowo „makrama", jak
-                        podają źródła encyklopedyczne, jest pochodze­nia arabskiego i oznacza "ozdobne
-                        frędzle</p>
-                </div>
-            </div>
-            </div>
-            <div style="background: url('media/background.png') no-repeat center center fixed;
-        background-size: cover">
-                <div class="center aligned column" style="text-align: center">
-                    <a href="#root" class="ui huge button" style="background-color: #2185d0; color: white;">
-                        Aktualnie w sprzedaży
-                        <i class="down arrow icon" style="color: white; margin: auto;"></i></a>
-                </div>
-                <div style="margin-top: 10px;" id='root'></div>
-            </div>
-            <div class='ui middle aligned stackable grid container'>
-                <div class="row">
-                    <div class="center aligned column"><h3>Dostępne kolory</h3></div>
-                </div>
-                <div class="row" style="text-align: center">
-                    <div class="four wide right floated column" style="margin: auto">
-                        <div class="ui cube shape">
-                            <div class="sides">
-                                <div class="side">
-                                    <div class="content">
-                                        <div class="center">
-                                            <i class="ui icon chess queen"
-                                               style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #5e6472"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="side">
-                                    <div class="content">
-                                        <div class="center">
-                                            <i class="ui icon chess queen"
-                                               style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #f4acb7"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="side">
-                                    <div class="content">
-                                        <div class="center">
-                                            <i class="ui icon chess queen"
-                                               style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #000814"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="side">
-                                    <div class="content">
-                                        <div class="center">
-                                            <i class="ui icon chess queen"
-                                               style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #ffd60a"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="side">
-                                    <div class="content">
-                                        <div class="center">
-                                            <i class="ui icon chess queen"
-                                               style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #582f0e"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="side active">
-                                    <div class="content">
-                                        <div class="center">
-                                            <i class="ui icon chess queen"
-                                               style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #03045e"></i>
-                                        </div>
-                                    </div>
+    </div>
+</nav>
+{% block content %}
+    <div style="position: relative; text-align: center; color: white">
+        <img class='background_image' src="media/background.png" alt="chimeric makramas" style="width: 100%">
+        <div style="position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%)">
+            <h1 style="font-family: 'Palanquin', sans-serif;font-size: xxx-large;">
+                Chimeric Makramas
+            </h1>
+            <h2 style="font-family: 'Palanquin', sans-serif;font-size: x-large;">
+                Zapraszam Cię do mojego makramowego Świata.</h2>
+        </div>
+    </div>
+    <div class="ui text container" style="margin-top: 5vh; margin-bottom: 2vh; text-align: center">
+        <h2 class="ui header">Akutalnie w sprzedaży</h2>
+    </div>
+    <div style="margin-top: 10px;" id='root'></div>
+    <div style="margin-top: 5vh; margin-bottom: 2vh; text-align: center">
+        <h2 class="ui header">Trochę więcej o <strong>Makramach</strong></h2>
+        <div>
+            <img class="ui small left floated image" src="/media/background.png">
+            <p>Makrama jest sztuką, która polega na zaplataniu artystycznych supełków bez użycia igły czy szydełka,
+                za pomocą tylko samych dłoni. Starożytny wschód znał pismo węzełkowe.
+                Pierwsi żeglarze pletli łańcuszki - talizmany i przywiązywali je na czubku masztu.
+                Inkowie w Peru wiązali naszyjniki. Ich właśnie można nazwać twórcami
+                pierwszych Słowo „makrama", jak podają źródła encyklopedyczne,
+                jest pochodzenia arabskiego i oznacza "ozdobne frędzle.</p>
+            <img class="ui small right floated image" src="/media/background.png">
+            <p>Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine definitiones. Quot wisi nulla ex duo.
+                Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix fabulas oporteat, ei quo
+                vide phaedrum, vim vivendum maiestatis in.</p>
+            <p>Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores adolescens, no
+                illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete utroque quo. Populo quodsi
+                te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi convenire mnesarchum eu per, quas minimum
+                postulant per id.</p>
+        </div>
+    </div>
+    <div class='ui middle aligned stackable grid container'>
+        <div class="row">
+            <div class="center aligned column"><h3>Dostępne kolory</h3></div>
+        </div>
+        <div class="row" style="text-align: center">
+            <div class="four wide right floated column" style="margin: auto">
+                <div class="ui cube shape">
+                    <div class="sides">
+                        <div class="side">
+                            <div class="content">
+                                <div class="center">
+                                    <i class="ui icon chess queen"
+                                       style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #5e6472"></i>
                                 </div>
                             </div>
                         </div>
-                        <div class="ui ignored divider"></div>
-                        <div class="ui ignored icon direction buttons">
-                            <div id='cube_button' class="ui button left" data-animation="flip" title="Flip Left"
-                                 data-direction="left"><i
-                                    class="left long arrow icon"></i></div>
-                            <div id='cube_button' class="ui button up" data-animation="flip" title="Flip Up"
-                                 data-direction="up"><i
-                                    class="up long arrow icon"></i></div>
-                            <div id='cube_button' class="ui icon button down" data-animation="flip"
-                                 title="Flip Down"
-                                 data-direction="down"><i class="down long arrow icon"></i></div>
-                            <div id='cube_button' class="ui icon button right" data-animation="flip"
-                                 title="Flip Right"
-                                 data-direction="right"><i class="right long arrow icon"></i></div>
+                        <div class="side">
+                            <div class="content">
+                                <div class="center">
+                                    <i class="ui icon chess queen"
+                                       style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #f4acb7"></i>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="ten wide column">
-                        <div class="ui four column stackable padded grid">
-                            <div class="red column">Red</div>
-                            <div class="orange column">Orange</div>
-                            <div class="yellow column">Yellow</div>
-                            <div class="olive column">Olive</div>
-                            <div class="green column">Green</div>
-                            <div class="teal column">Teal</div>
-                            <div class="blue column">Blue</div>
-                            <div class="violet column">Violet</div>
-                            <div class="purple column">Purple</div>
-                            <div class="pink column">Pink</div>
-                            <div class="brown column">Brown</div>
-                            <div class="grey column">Grey</div>
-                            <div class="black column">Black</div>
+                        <div class="side">
+                            <div class="content">
+                                <div class="center">
+                                    <i class="ui icon chess queen"
+                                       style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #000814"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side">
+                            <div class="content">
+                                <div class="center">
+                                    <i class="ui icon chess queen"
+                                       style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #ffd60a"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side">
+                            <div class="content">
+                                <div class="center">
+                                    <i class="ui icon chess queen"
+                                       style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #582f0e"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side active">
+                            <div class="content">
+                                <div class="center">
+                                    <i class="ui icon chess queen"
+                                       style="padding-top: 20px; font-size: 4em; transform: rotate(180deg); margin-bottom: 100px; color: #03045e"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="ui ignored divider"></div>
+                <div class="ui ignored icon direction buttons">
+                    <div id='cube_button' class="ui button left" data-animation="flip" title="Flip Left"
+                         data-direction="left"><i
+                            class="left long arrow icon"></i></div>
+                    <div id='cube_button' class="ui button up" data-animation="flip" title="Flip Up"
+                         data-direction="up"><i
+                            class="up long arrow icon"></i></div>
+                    <div id='cube_button' class="ui icon button down" data-animation="flip"
+                         title="Flip Down"
+                         data-direction="down"><i class="down long arrow icon"></i></div>
+                    <div id='cube_button' class="ui icon button right" data-animation="flip"
+                         title="Flip Right"
+                         data-direction="right"><i class="right long arrow icon"></i></div>
+                </div>
             </div>
+            <div class="ten wide column">
+                <div class="ui four column stackable padded grid">
+                    <div class="red column">Red</div>
+                    <div class="orange column">Orange</div>
+                    <div class="yellow column">Yellow</div>
+                    <div class="olive column">Olive</div>
+                    <div class="green column">Green</div>
+                    <div class="teal column">Teal</div>
+                    <div class="blue column">Blue</div>
+                    <div class="violet column">Violet</div>
+                    <div class="purple column">Purple</div>
+                    <div class="pink column">Pink</div>
+                    <div class="brown column">Brown</div>
+                    <div class="grey column">Grey</div>
+                    <div class="black column">Black</div>
+                </div>
             </div>
-            </div>
-        {% endblock %}
+        </div>
+    </div>
+{% endblock %}
 
 <!-- Include Semantic UI -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js">
